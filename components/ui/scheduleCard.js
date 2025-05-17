@@ -6,7 +6,7 @@ export default function ScheduleCard({
   time,
   title,
   description,
-  time1,
+  
   image,
   themeColor,
 }) {
