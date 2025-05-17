@@ -1,0 +1,107 @@
+.login_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+  
+}
+
+.login_form {
+  background-color: black;
+  width: 400px;
+  padding-right: 4rem;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 212, 255, 0.75);
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.form_group {
+  margin-bottom: 1.9rem;
+}
+
+.form_group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+}
+
+.form_group input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: white;
+  color: white;
+}
+
+.form_group input::placeholder {
+  color: rgba(171, 171, 170, 0.6);
+}
+
+
+
+.login_button {
+  background-color: #40afde;
+  border-radius: 100px;
+  box-shadow: rgba(154, 177, 239, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: rgb(62, 73, 79);
+  cursor: pointer;
+  display: inline-block;
+  
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.login_button:hover {
+  box-shadow: rgba(20, 71, 221, 0.35) 0 -25px 18px -14px inset,
+    rgba(79, 56, 167, 0.25) 0 1px 2px, rgba(43, 55, 114, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(105, 52, 239, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+@media screen and (max-width: 650px) {
+  .login_container {
+    padding: 20px;
+  }
+
+  .login_form {
+    width: 300px;
+    
+  }
+  
+}
+
+
+@media screen and (max-width: 450px) {
+  .login_container {
+    padding: 30px;
+  }
+
+  .login_form {
+    width: 180px;
+    
+  }
+  
+}
