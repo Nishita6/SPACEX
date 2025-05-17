@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import styles from './login.module.css'
-import Link from "next/link"
+
 import ShootingStarsDemo from "@/components/ui/shooting-stars-demo";
 
 export default function Login ()  {
