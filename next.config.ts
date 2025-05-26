@@ -1,8 +1,8 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: false,
-  },
+  // Any valid Next.js config options here
+  // For example:
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
