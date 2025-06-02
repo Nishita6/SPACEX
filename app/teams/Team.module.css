@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 1rem;
@@ -21,20 +23,38 @@
   justify-items: center;
   place-items: center;
 }
+
 .card {
   position: relative;
   width: 250px;
   height: 300px;
-  background: white;
+  background: rgba(17, 17, 17, 0.9);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 20px 4px #00d4ffcc, 0 0 12px #00d4ff55 inset;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 0 20px rgba(0, 212, 255, 0.3),
+    0 0 40px rgba(0, 255, 153, 0.2);
   transition: box-shadow 0.3s ease;
   backdrop-filter: blur(5px);
-  cursor:pointer
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
-
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(45deg, #00d4ff, #00ff99);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  z-index: -1;
+}
 
 .scan_grid {
   position: absolute;
@@ -60,16 +80,14 @@
   animation: scanDown 1.5s linear infinite;
 }
 
-
-  @keyframes scanDown {
-    0% {
-      top: -100%;
-    }
-    100% {
-      top: 100%;
-    }
+@keyframes scanDown {
+  0% {
+    top: -100%;
   }
-
+  100% {
+    top: 100%;
+  }
+}
 
 .avatar {
   display: block;
@@ -84,11 +102,11 @@
 .name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #222;
+  color: #837f7f;
 }
 
 .role {
-  color: #666;
+  color: #eae5e5;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
@@ -128,7 +146,7 @@
   }
 
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .container {
     padding: 1rem;
   }
